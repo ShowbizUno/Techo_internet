@@ -1,0 +1,68 @@
+/*style de Art*/
+/*******************Couleurs**************/
+.pink{
+    background-color:pink;
+}
+
+.lightcyan{
+    background-color:lightcyan;
+}
+
+.lightYellow{
+    background-color:lightyellow;
+}
+
+.aligner{
+    display:inline-block;
+}
+
+.ecartTop3pc{
+    margin-top:3%;
+}
+
+.bordureRight{
+    border-right: solid thin;
+}
+
+.bordureBottom{
+    border-bottom: solid thin;
+}
+
+.paddingEcart{
+    padding-bottom: 3%;
+}
+
+.paddingTop{
+    padding-top: 3%;
+}
+
+#logo_haut_page{
+    width:75%;
+}
+
+#album_carousel_un{
+    color: black;
+    text-shadow: 1px 1px 3px white;
+}
+#footer_color{
+    background-color:#1677a7;
+}
+
+.mid_footer_icons{
+    margin-left:10%;
+}
+#couleur_footer{
+    background-color:#D3D3D3;
+}
+
+#first_column_footer{
+    margin-left: 20%;
+}
+
+#second_column_footer{
+    margin-left: -20%;
+}
+
+.line_height_txt{
+    line-height: 250%;
+}
