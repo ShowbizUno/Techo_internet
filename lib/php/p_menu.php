@@ -25,9 +25,18 @@
                     <a class="dropdown-item" href="#">CD</a>
                     <a class="dropdown-item" href="#">DVD</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="./index.php?page=instruments_digitaux.php">Instruments</a>
+                    <a class="dropdown-item" href="./index.php?page=instruments_digitaux.php">Liste CD</a>
                 </div>
             </li>
+            
+            <li class="nav-item">
+                <?php if (isset($_SESSION['client'])) { ?>
+                    <a class="nav-link" href="./index.php?page=mon_profil.php">Mon profil</a><?php
+                }
+                ?>
+
+            </li>
+            
             <li class="nav-item active">
                 <?php if (!isset($_SESSION['client'])) { ?>
                     <a class="nav-link" href="./index.php?page=inscription.php">S'inscrire <span class="sr-only">(current)</span></a>

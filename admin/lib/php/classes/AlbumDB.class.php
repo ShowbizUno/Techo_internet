@@ -48,4 +48,20 @@ class AlbumDB extends Album {
             return null;
         }
     }
+    
+    public function updateProduit($champ,$nouveau,$id){        
+        
+        try {
+          // PREPARER LA REQUETE COMME VU PRECEDEMMENT
+            $query="UPDATE albums set ".$champ." = '".$nouveau."' where id_album ='".$id."'";            
+            $resultset = $this->_db->prepare($query);
+            $resultset->execute();    
+            print $query;
+            
+        }catch(PDOException $e){
+            print $e->getMessage();
+        }
+    }
+
+    
 }

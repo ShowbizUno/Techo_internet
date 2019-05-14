@@ -17,17 +17,9 @@
             <li class="nav-item active">
                 <a class="nav-link" href="./index.php?page=accueil.php">Accueil <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Boutique
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">CD</a>
-                    <a class="dropdown-item" href="#">DVD</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="./index.php?page=instruments_digitaux.php">Instruments</a>
-                </div>
-            </li>
+            <li class="nav-item">
+                  <a class="nav-link" href="./index.php?page=tableau.php">Tableau clients</a>
+             </li>
             <li class="nav-item">
                 <?php if (!isset($_SESSION['admin'])) { ?>
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Mon profil</a><?php

@@ -11,6 +11,7 @@ if (isset($_POST['submit_login'])) {
         print "<br/>Données incorrectes";
     } else {
         $_SESSION['admin'] = 1;//= lorsque l'utilisateur est admin
+        $_SESSION['id'] = $admin['id_admin'];
         unset($_SESSION['page']);
         //header('Location: http://debian-edu.condorcet.be/~silvana.deluca@condorcet.be/demo1/admin/index.php');
         print "<meta http-equiv=\"refresh\": Content=\"0;URL=./admin/index.php?page=accueil.php\">";

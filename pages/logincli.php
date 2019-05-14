@@ -6,11 +6,14 @@ if (isset($_POST['submit_login'])) {
     $log = new ClientDB($cnx);
     
     $client = $log->getClient($pseudo, $password);
-    var_dump($client);
     if (is_null($client)) {
         print "<br/>Données incorrectes";
     } else {
+        //var_dump($client);
+        //echo $client[0]->id_client;
         $_SESSION['client'] = 1;//= lorsque l'utilisateur est client
+        $_SESSION['id'] = $client[0]->id_client;
+        //echo $_SESSION['id'];
         print "<meta http-equiv=\"refresh\": Content=\"0;URL=index.php?page=accueil.php\">";
     }
 }

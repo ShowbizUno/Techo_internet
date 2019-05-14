@@ -1,8 +1,9 @@
-/* fonctions jquery pour DA */
+    /* fonctions jquery pour DA */
 $(document).ready(function () {//attend que toutes les objets de la page soient chargées
     
     //code pour le tableau éditable
     $("span[id]").click(function () {
+
       //Récupération du contenu d'origine de la zone cliquée
         var valeur1 = $.trim($(this).text());
 
@@ -20,6 +21,7 @@ $(document).ready(function () {//attend que toutes les objets de la page soient 
         var name = $(this).attr("name");
 
         $(this).blur(function () {
+            
             $(this).removeClass("borderInput");
            //récupération de la nouveau contenu du champ qui vient de perdre le focus (blur)
             var valeur2 = $(this).text();
@@ -27,13 +29,14 @@ $(document).ready(function () {//attend que toutes les objets de la page soient 
 
             if (valeur1 != valeur2) // Si on a fait un changement
             {
+               
                //adjonction des paramètres qui accompagnent le nom du fichier appelé
                 var parametre = 'champ=' + name + '&id=' + ident + '&nouveau=' + valeur2;
                 var retour = $.ajax({
                     type: 'GET',
                     data: parametre,
                     dataType: "text",
-                    url: "./admin/lib/php/ajax/ajaxUpdateProduit.php",
+                    url: "./lib/php/ajax/ajaxUpdateProduit.php",
                     success: function (data) {
                        //rien de particulier à faire
                         console.log("success");

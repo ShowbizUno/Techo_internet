@@ -9,7 +9,6 @@
 $artistes = new ArtistesDB($cnx);
 $art = $artistes->getAllArtistes();
 $nbr_art = count($art);
-print $nbr_art;
 
 $albart = new AlbumDB($cnx);
 
